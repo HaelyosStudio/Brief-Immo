@@ -1,0 +1,115 @@
+:root {
+    --mainColor: #FFAC12;
+    --secondaryColor: #849BB8;
+    --tertiaryColor: #74AEF7;
+    --textColor: #FAFAFA;
+    --textDarkColor: #252525;
+    --warningColor: #ffc107;
+    --dangerColor: #dc3545;
+    --infoColor: #0dcaf0;
+    --backgroundColor: #eeeeee;
+    --lightBackgroundColor: #f1f1f1;
+    --backgroundDarkColor: #252525;
+    --scrollBarMainColor: #FFAC12;
+    --scrollBarSecondColor: #9b690b;
+    --borderColor: #6d6d6d67;
+}
+
+.sellSectionBox {
+    position: fixed;
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: row;
+    gap: 20px;
+    padding: 30px;
+    width: 895px;
+    height: 60%;
+    top: 150px;
+    align-self: center;
+    background-color: var(--lightBackgroundColor);
+    border-radius: 15px;
+    transition-duration: 0.3s;
+    z-index: 8;
+}
+
+.leftSectionBox {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+}
+
+.rightSectionBox {
+    display: flex;
+    flex-direction: column;
+}
+
+.formTitle {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--textDarkColor);
+    text-align: center;
+}
+
+.imageInput {
+    display: inline-block;
+    justify-content: center;
+    background-color: var(--mainColor);
+    color: var(--textDarkColor);
+    border-radius: 0px 0px 15px 15px;
+    width: 575px;
+    height: 38px;
+    cursor: pointer;
+}
+
+.imagePreviewBox {
+    width: 575px;
+    height: 423px;
+    border-radius: 15px 15px 0px 0px;
+    background-color: transparent;
+    z-index: 10;
+}
+
+.imagePreview {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px 15px 0px 0px;
+    z-index: 9;
+}
+
+@media screen and (max-width: 650px) {
+    .sellSectionBox {
+        flex-flow: column;
+        align-items: center;
+        height: 630px;
+        width: 280px !important;
+        overflow: scroll;
+    }
+
+    .imagePreviewBox {
+        width: 295px;
+        height: 215px;
+    }
+
+    .imageInput {
+        width: 295px;
+        height: 40px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .sellSectionBox {
+        top: 148px;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .sellSectionBox {
+        flex-flow: column;
+        align-items: center;
+        height: 630px;
+        width: 560px;
+        overflow: scroll;
+    }
+}
