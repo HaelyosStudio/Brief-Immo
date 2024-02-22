@@ -3,9 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Oxanium:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Code&lt;Immo&gt;</title>
+    
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    
+    <header class="siteHeader scrolled">
+        <div class="container">
+            <div class="titleContainer">
+                <h1 class="siteTitle"><span style="color: var(--mainColor);">Code</span>&lt;Immo&gt;</h1>
+                <h1 class="siteSubTitle">Next Home <span style="color: var(--mainColor);">loaded</span></h1>
+            </div>
+            </h1>
+            <nav class="siteNav">
+                <div class="burgerMenu">
+                    <div class="burgerLine"></div>
+                    <div class="burgerLine"></div>
+                    <div class="burgerLine"></div>
+                </div>
+                <ul class="navLinks">
+                    <li><a href="#" class="navLink" id="homeButton">Home</a></li>
+                    <li><a href="#" class="navLink" id="rentButton">Rent</a></li>
+                    <li><a href="#" class="navLink" id="buyButton">Buy</a></li>
+                    <li><a href="#" class="navLink" id="sellButton">Sell</a></li>
+                </ul>
+                <button class="searchButton" id="searchButton">Search now &#10142;</button>
+            </nav>
+        </div>
+    </header>
+    <main class="mainSection">
+        <div class="landingPageImg">
+            <div class="landingPageFilter"></div>
+        </div>
+        <h2 class="mainSectionTitle">Real estate propositions <span style="color: var(--mainColor);">coded</span> just for <span style="color: var(--mainColor);">you</span></h2>
+        <div class="sellSectionBox outerShadow" id="sellSectionBox">
+            <div class="leftSectionBox">
+                <div class="locationBox">
+                    <h3 class="formTitle">Location</h3>
+                    <input type="text" placeholder="Enter the address" class="locationInput innerShadow" id="locationInput">
+                </div>
+                <div class="typeBox">
+                    <h3 class="formTitle">Type</h3>
+                    <select name="Type Selector" class="typeInput innerShadow" id="typeInput">
+                        <option value="house">House</option>
+                        <option value="apartment">Apartment</option>
+                        <option value="studio">Studio</option>
+                        <option value="loft">Loft</option>
+                    </select>
+                </div>
+                <div class="roomBox">
+                    <h3 class="formTitle">Rooms number</h3>
+                    <input type="number" name="Room Min" placeholder="Enter the minimum room number" min="1" max="19" class="roomInput innerShadow" id="roomMinInput">
+                    <!-- <input type="number" name="Room Max" placeholder="Enter the maximum room number" min="2" max="20" class="roomInput innerShadow" id="roomMaxInput">
+                    <input type="checkbox" name="Min max" id="roomMinMax"> -->
+                </div>
+                <div class="priceBox">
+                    <h3 class="formTitle">Price</h3>
+                    <input type="number" name="Price Min" placeholder="Enter the price" min="100" max="99999999" class="priceInput innerShadow" id="priceMinInput">
+                    <!-- <input type="number" name="Price Max" placeholder="Enter the maximum price" min="101" max="100000000" class="priceInput innerShadow" id="priceMaxInput">
+                    <input type="checkbox" name="Min max" id="priceMinMax"> -->
+                </div>
+                <div class="surfaceBox">
+                    <h3 class="formTitle">Surface area</h3>
+                    <input type="number" name="Surface Min" placeholder="Enter the surface in m²" min="8" max="9999" class="surfaceInput innerShadow"  id="surfaceMinInput">
+                    <!-- <input type="number" name="Surface Max" placeholder="Enter the max surface in m²" min="9" max="10000" class="surfaceInput innerShadow"  id="surfaceMaxInput">
+                    <input type="checkbox" name="Min max" id="surfaceMinMax"> -->
+                </div>
+                <div class="terrainSurfaceBox">
+                    <h3 class="formTitle">Surface area of the Terrain</h3>
+                    <input type="number" name="Surface Terrain Min" placeholder="Enter the terrain surface in m²" min="8" max="9999" class="surfaceInput innerShadow"  id="surfaceTerrainMinInput">
+                    <!-- <input type="number" name="Surface Terrain Max" placeholder="Enter the max surface in m²" min="9" max="10000" class="surfaceInput innerShadow"  id="surfaceTerrainMaxInput">
+                    <input type="checkbox" name="Min max" id="surfaceTerrainMinMax"> -->
+                </div>
+            </div>
+            <div class="rightSectionBox">
+                <h3 class="formTitle">Pictures of your property</h3>
+                <div class="imagePreviewBox outerSolidShadow" id="imagePreviewContainer">
+                    <div class="imagePreview outerSolidShadow" id="imagePreview"></div>
+                </div>
+                <input type="file" name="Main Image" class="imageInput outerSolidShadow" accept="image/png, image/jpeg" id="mainImage" required>
+            </div>
+        </div>
+    </main>
+    <section class="propertiesSection">
+        <h2 class="propertiesTitle">Properties</h2>
+        <img src="/assets/Rectangle.png" alt="Rectangle" class="separationRectangle">
+        <p class="propertiesSubTitle">This is where your life <span style="color: var(--mainColor);">reboots</span></p>
+        <div class="propertiesBox">
+            <div class="propertyBox outerShadow">
+                <img src="/assets/House Example 1.png" alt="House #1" class="propertyImg">
+                <div class="propertyInfos">
+                    <div class="titlePrice">
+                        <h3>House example</h3>
+                        <h3>150 000€</h3>
+                    </div>
+                    <div class="details">
+                        <h4>Type</h4>
+                        <h4>Location</h4>
+                        <h4>Size</h4>
+                    </div>
+                    <div class="descriptionBox">
+                        <h3>Description</h3>
+                        <p class="descTextBox scroller">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia provident fuga non enim expedita neque deserunt hic voluptatum quo! Quaerat accusantium inventore vero cum pariatur ipsa enim totam maxime dicta?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="siteFooter">
+        <div class="container">
+            <p>&copy; 2024 My Site. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="./js/script.js" type="module"></script>
 </body>
 </html>
