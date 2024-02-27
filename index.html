@@ -7,7 +7,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Oxanium:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <title>Code&lt;Immo&gt;</title>
-    
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -24,11 +23,10 @@
                     <div class="burgerLine"></div>
                     <div class="burgerLine"></div>
                 </div>
-                <ul class="navLinks">
-                    <li><a href="#" class="navLink" id="homeButton">Home</a></li>
-                    <li><a href="#" class="navLink" id="rentButton">Rent</a></li>
-                    <li><a href="#" class="navLink" id="buyButton">Buy</a></li>
-                    <li><a href="#" class="navLink" id="sellButton">Sell</a></li>
+                <ul class="navButtons">
+                    <li><button class="navButton" id="homeButton">Home</button></li>
+                    <li><button class="navButton" id="rentButton">Rent</button></li>
+                    <li><button class="navButton" id="sellButton">Sell</button></li>
                 </ul>
                 <button class="searchButton" id="searchButton">Search now &#10142;</button>
             </nav>
@@ -39,45 +37,60 @@
             <div class="landingPageFilter"></div>
         </div>
         <h2 class="mainSectionTitle">Real estate propositions <span style="color: var(--mainColor);">coded</span> just for <span style="color: var(--mainColor);">you</span></h2>
-        <div class="sellSectionBox outerShadow" id="sellSectionBox">
+        <div class="sellSectionBox outerShadow hidden" id="sellSectionBox">
             <div class="leftSectionBox">
+                <div class="titleBox">
+                    <h3 class="formTitle">Title <span style="color: var(--mainColor);">*</span></h3>
+                    <input type="text" name="Title" placeholder="Enter the title" min="4" max="100" class="titleInput innerShadow"  id="titleInput">
+                    <!-- <input type="number" name="Surface Terrain Max" placeholder="Enter the max surface in m²" min="9" max="10000" class="surfaceInput innerShadow"  id="surfaceTerrainMaxInput">
+                    <input type="checkbox" name="Min max" id="surfaceTerrainMinMax"> -->
+                </div>
                 <div class="locationBox">
-                    <h3 class="formTitle">Location</h3>
+                    <h3 class="formTitle">Location <span style="color: var(--mainColor);">*</span></h3>
                     <input type="text" placeholder="Enter the address" class="locationInput innerShadow" id="locationInput">
                 </div>
-                <div class="typeBox">
-                    <h3 class="formTitle">Type</h3>
-                    <select name="Type Selector" class="typeInput innerShadow" id="typeInput">
-                        <option value="house">House</option>
-                        <option value="apartment">Apartment</option>
-                        <option value="studio">Studio</option>
-                        <option value="loft">Loft</option>
-                    </select>
-                </div>
-                <div class="roomBox">
-                    <h3 class="formTitle">Rooms number</h3>
-                    <input type="number" name="Room Min" placeholder="Enter the minimum room number" min="1" max="19" class="roomInput innerShadow" id="roomMinInput">
-                    <!-- <input type="number" name="Room Max" placeholder="Enter the maximum room number" min="2" max="20" class="roomInput innerShadow" id="roomMaxInput">
-                    <input type="checkbox" name="Min max" id="roomMinMax"> -->
+                <div class="typeRoomBox">
+                    <div class="typeBox">
+                        <h3 class="formTitle">Type <span style="color: var(--mainColor);">*</span></h3>
+                        <select name="Type Selector" class="selectorStyle innerShadow" id="typeInput">
+                            <option value="house">House</option>
+                            <option value="apartment">Apartment</option>
+                            <option value="studio">Studio</option>
+                            <option value="loft">Loft</option>
+                        </select>
+                    </div>
+                    <div class="roomBox">
+                        <h3 class="formTitle">Rooms <span style="color: var(--mainColor);">*</span></h3>
+                        <select name="Room number" id="roomInput" class="selectorStyle innerShadow">
+                            <option value="t1">T1</option>
+                            <option value="t2">T2</option>
+                            <option value="t3">T3</option>
+                            <option value="t4">T4</option>
+                            <option value="t5">T5</option>
+                            <option value="t6">T6</option>
+                            <option value="t7">T7</option>
+                        </select>
+                        <!-- <input type="number" name="Room Max" placeholder="Enter the maximum room number" min="2" max="20" class="roomInput innerShadow" id="roomMaxInput">
+                        <input type="checkbox" name="Min max" id="roomMinMax"> -->
+                    </div>
                 </div>
                 <div class="priceBox">
-                    <h3 class="formTitle">Price</h3>
-                    <input type="number" name="Price Min" placeholder="Enter the price" min="100" max="99999999" class="priceInput innerShadow" id="priceMinInput">
+                    <h3 class="formTitle">Price <span style="color: var(--mainColor);">*</span></h3>
+                    <input type="number" name="Price" placeholder="Enter the price" min="100" max="99999999" class="priceInput innerShadow" id="priceInput">
                     <!-- <input type="number" name="Price Max" placeholder="Enter the maximum price" min="101" max="100000000" class="priceInput innerShadow" id="priceMaxInput">
                     <input type="checkbox" name="Min max" id="priceMinMax"> -->
                 </div>
                 <div class="surfaceBox">
-                    <h3 class="formTitle">Surface area</h3>
-                    <input type="number" name="Surface Min" placeholder="Enter the surface in m²" min="8" max="9999" class="surfaceInput innerShadow"  id="surfaceMinInput">
+                    <h3 class="formTitle">Surface area <span style="color: var(--mainColor);">*</span></h3>
+                    <input type="number" name="Surface" placeholder="Enter the surface in m²" min="8" max="9999" class="surfaceInput innerShadow"  id="surfaceInput">
                     <!-- <input type="number" name="Surface Max" placeholder="Enter the max surface in m²" min="9" max="10000" class="surfaceInput innerShadow"  id="surfaceMaxInput">
                     <input type="checkbox" name="Min max" id="surfaceMinMax"> -->
                 </div>
-                <div class="terrainSurfaceBox">
-                    <h3 class="formTitle">Surface area of the Terrain</h3>
-                    <input type="number" name="Surface Terrain Min" placeholder="Enter the terrain surface in m²" min="8" max="9999" class="surfaceInput innerShadow"  id="surfaceTerrainMinInput">
-                    <!-- <input type="number" name="Surface Terrain Max" placeholder="Enter the max surface in m²" min="9" max="10000" class="surfaceInput innerShadow"  id="surfaceTerrainMaxInput">
-                    <input type="checkbox" name="Min max" id="surfaceTerrainMinMax"> -->
+                <div class="descFieldBox">
+                    <h3 class="formTitle">Description <span style="color: var(--mainColor);">*</span></h3>
+                    <input type="text" placeholder="Enter the description" class="descInput innerShadow" id="descInput">
                 </div>
+                <button class="saveButton outerSolidShadow" id="saveButton">Save Property</button>
             </div>
             <div class="rightSectionBox">
                 <h3 class="formTitle">Pictures of your property</h3>
@@ -93,8 +106,8 @@
         <img src="/assets/Rectangle.png" alt="Rectangle" class="separationRectangle">
         <p class="propertiesSubTitle">This is where your life <span style="color: var(--mainColor);">reboots</span></p>
         <div class="propertiesBox">
-            <div class="propertyBox outerShadow">
-                <img src="/assets/House Example 1.png" alt="House #1" class="propertyImg">
+            <!-- <div class="propertyBox outerShadow">
+                <img src="/assets/House Example 1.png" alt="House #1" class="propertyImg" id="mainImage">
                 <div class="propertyInfos">
                     <div class="titlePrice">
                         <h3>House example</h3>
@@ -107,10 +120,10 @@
                     </div>
                     <div class="descriptionBox">
                         <h3>Description</h3>
-                        <p class="descTextBox scroller">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia provident fuga non enim expedita neque deserunt hic voluptatum quo! Quaerat accusantium inventore vero cum pariatur ipsa enim totam maxime dicta?</p>
+                        <p class="descTextBox scroller">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt enim perferendis atque placeat? Qui necessitatibus fugiat porro, eius distinctio corporis vel, quasi suscipit voluptas minima et error voluptatum illo ex pariatur eveniet accusamus eligendi natus assumenda laboriosam esse maiores vero labore? Quas exercitationem tempora hic deleniti ab assumenda maxime expedita deserunt dolores, inventore quae sed ex? Officiis reprehenderit voluptatibus voluptatum!</p>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </section>
     <footer class="siteFooter">
