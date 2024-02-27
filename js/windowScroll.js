@@ -10,7 +10,7 @@ export function windowScroll() {
     
     function handleScroll() {
         const navBar = document.querySelector('.siteHeader');
-        const navLinks = document.querySelectorAll('.navLink');
+        const navLinks = document.querySelectorAll('.navButton');
         const burgerLines = document.querySelectorAll('.burgerLine');
         const sellSection = document.querySelector('.sellSectionBox');
     

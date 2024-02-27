@@ -32,9 +32,9 @@ main {
     width: 80vw;
 }
 
-h4:not(:last-of-type) {
+h4:first-of-type {
     border-right: 1px solid var(--borderColor);
-    padding-right: 30px;
+    padding-right: 10px;
 }
 
 input, select {
@@ -97,7 +97,7 @@ input, select {
     color: var(--textColor);
     padding: 50px 0;
     position: fixed;
-    width: 100%;
+    width: 100vw;
     top: 0;
     left: 0;
     z-index: 1000;
@@ -133,13 +133,24 @@ input, select {
     cursor: default;
 }
 
-.navLinks {
+.navButtons {
     display: flex;
     gap: 75px;
 }
 
-.navLink {
+.navButton {
     transition-duration: 0.3s;
+    border: none;
+    background-color: transparent;
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.navButton:hover {
+    text-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition-duration: 0.3s;
+    font-size: 20px;
 }
 
 .siteNav {
@@ -182,15 +193,10 @@ input, select {
     transition-duration: 0.3s;
 }
 
-.siteNav ul li:hover {
-    text-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    transition-duration: 0.3s;
-    font-size: 20px;
-}
 .siteNav ul li:first-child {
     margin-left: 0;
 }
-.siteNav ul li a {
+.siteNav ul li button {
     text-decoration: none;
     color: var(--textColor);
 }
@@ -267,9 +273,10 @@ input, select {
     color: var(--textDarkColor);
     gap: 15px;
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     background-color: var(--backgroundColor);
     padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .propertiesTitle {
@@ -293,13 +300,13 @@ input, select {
     flex-flow: row wrap;
     width: 90%;
     height: 100%;
+    gap: 50px;
 }
 
 .propertyBox {
     display: flex;
     flex-direction: column;
     width: 336px;
-    height: 550px;
     border-radius: 25px;
 }
 
@@ -307,6 +314,14 @@ input, select {
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+.propertyImg {
+    width: 336px;
+    height: 276px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px 20px 0px 0px;
 }
 
 .titlePrice {
@@ -319,8 +334,26 @@ input, select {
 .details {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    padding: 5px 10px;
+    justify-content: center;
+    align-self: center;
+    width: 336px;
+    gap: 10px;
+}
+
+.details h4 {
+    font-size: 14px;
+    align-self: center;
+}
+
+.letterUpper::first-letter {
+    text-transform: uppercase;
+}
+
+.locationText {
+    font-size: 14px;
+    text-align: center;
+    border: none !important;
+    padding: 0px !important;
 }
 
 .descriptionBox {
@@ -335,6 +368,7 @@ input, select {
 }
 
 .descTextBox {
+    justify-self: center;
     overflow: auto;
     width: 305px;
     height: 170px;
@@ -345,6 +379,10 @@ input, select {
         font-size: 48px;
         width: 275px;
         margin-left: 25px;
+    }
+
+    .propertiesBox {
+        height: 100%;
     }
 }
 

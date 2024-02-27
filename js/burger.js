@@ -1,7 +1,7 @@
 export function burgerButton() {
     console.log('burgerButton Script loaded!');
     const burgerMenu = document.querySelector('.burgerMenu');
-    const navLinks = document.querySelector('.navLinks');
+    const navLinks = document.querySelector('.navButtons');
     const searchButton = document.querySelector('.searchButton');
     
     burgerMenu.addEventListener('click', () => {
