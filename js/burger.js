@@ -1,11 +1,10 @@
+import { ConstManager } from "./mainManager.js";
+
 export function burgerButton() {
     console.log('burgerButton Script loaded!');
-    const burgerMenu = document.querySelector('.burgerMenu');
-    const navLinks = document.querySelector('.navButtons');
-    const searchButton = document.querySelector('.searchButton');
-    
-    burgerMenu.addEventListener('click', () => {
-        navLinks.classList.toggle('enable');
-        searchButton.classList.toggle('disable');
+
+    ConstManager.burgerMenu.addEventListener('click', () => {
+        ConstManager.navLinks.classList.toggle('enable');
+        ConstManager.searchButton.classList.toggle('disable');
     });
 }
