@@ -62,6 +62,18 @@ export function saveProperty() {
     reader.readAsDataURL(mainImageFile);
 }
 
+ConstManager.type.addEventListener('change', function() {
+    hideRooms();
+});
+
+export function hideRooms() {
+    if (ConstManager.type.value == 'studio' || ConstManager.type.value == 'loft') {
+        ConstManager.roomBox.classList.add('hidden');
+    } else {
+        ConstManager.roomBox.classList.remove('hidden');
+    }
+}
+
 function clearInputFields() {
     ConstManager.title.value = '';
     ConstManager.location.value = '';

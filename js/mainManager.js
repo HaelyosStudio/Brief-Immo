@@ -12,4 +12,5 @@ export const ConstManager = {
     burgerMenu: document.querySelector('.burgerMenu'),
     navLinks: document.querySelector('.navButtons'),
     searchButton: document.querySelector('.searchButton'),
+    roomBox: document.getElementById('roomId'),
 }
