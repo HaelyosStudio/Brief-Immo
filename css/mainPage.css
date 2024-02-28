@@ -377,6 +377,19 @@ input, select {
     height: 170px;
 }
 
+@media screen and (max-width: 380px) {
+    .mainSectionTitle {
+        align-self: center;
+        margin-left: 0px !important;
+        width: 100vw;
+        height: ;
+    }
+
+    .siteHeader {
+        flex-wrap: wrap;
+    }
+}
+
 @media screen and (max-width: 610px) {
     .mainSectionTitle {
         font-size: 48px;

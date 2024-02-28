@@ -22,14 +22,15 @@
     flex-flow: row;
     gap: 20px;
     padding: 30px;
-    width: 895px;
-    height: 60%;
+    height: 60vh;
+    max-height: 616px;
     top: 150px;
     align-self: center;
     background-color: var(--lightBackgroundColor);
     border-radius: 15px;
     transition-duration: 0.3s;
     z-index: 8;
+    overflow-y: scroll;
 }
 
 .leftSectionBox {
@@ -37,7 +38,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 10px;
+    gap: 7px;
 }
 
 .rightSectionBox {
@@ -98,7 +99,18 @@
 .typeRoomBox {
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: 295px;
+}
+
+.descInput {
+    background-color: var(--backgroundColor);
+    border: none;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 295px;
+    min-width: 295px;
+    max-height: 130px;
+    min-height: 100px;
 }
 
 @media screen and (max-width: 650px) {
