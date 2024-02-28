@@ -9,6 +9,7 @@ export function toggleWindow() {
             ConstManager.navLinks.classList.toggle('enable');
         } else {
             ConstManager.sellWindow.classList.add('hidden');
+            ConstManager.navLinks.classList.toggle('enable');
         }
     });
 }
