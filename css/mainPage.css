@@ -227,13 +227,13 @@ input, select {
     left: 0;
     width: 100%;
     height: 980px;
-    background-image: url(./assets/mainBackgroundImg.png);
+    background-image: url(./../assets/mainBackgroundImg.png);
     background-size: cover;
     z-index: -1;
 }
 
 .landingPageFilter {
-    background-image: url(./assets/Object.png);
+    background-image: url(./../assets/Object.png);
     position: fixed;
     top: 0;
     left: 0;
