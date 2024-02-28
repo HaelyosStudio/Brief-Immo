@@ -105,8 +105,8 @@
     .sellSectionBox {
         flex-flow: column;
         align-items: center;
-        height: 630px;
-        width: 280px !important;
+        height: 400px !important;
+        width: 300px !important;
         overflow: scroll;
     }
 
