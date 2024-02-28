@@ -419,11 +419,11 @@ input, select {
         margin-left: 50px;
     }
 
-    .navLinks {
+    .navButtons {
         gap: 0px !important;
     }
 
-    .navLink {
+    .navButton {
         color: var(--textDarkColor) !important;
     }
 }
