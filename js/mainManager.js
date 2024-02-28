@@ -9,4 +9,7 @@ export const ConstManager = {
     surface: document.getElementById('surfaceInput'),
     description: document.getElementById('descInput'),
     mainImage: document.getElementById('mainImage'),
+    burgerMenu: document.querySelector('.burgerMenu'),
+    navLinks: document.querySelector('.navButtons'),
+    searchButton: document.querySelector('.searchButton'),
 }

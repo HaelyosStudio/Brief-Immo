@@ -6,6 +6,7 @@ export function toggleWindow() {
     ConstManager.sellButton.addEventListener('click', () => {
         if (ConstManager.sellWindow.classList.contains('hidden')) {
             ConstManager.sellWindow.classList.remove('hidden');
+            ConstManager.navLinks.classList.toggle('enable');
         } else {
             ConstManager.sellWindow.classList.add('hidden');
         }
