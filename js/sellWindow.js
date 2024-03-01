@@ -4,13 +4,8 @@ import { displayProperties } from "./displayProperties.js";
 
 export function toggleWindow() {
     ConstManager.sellButton.addEventListener('click', () => {
-        if (ConstManager.sellWindow.classList.contains('hidden')) {
-            ConstManager.sellWindow.classList.remove('hidden');
+            ConstManager.sellWindow.classList.toggle('visible');
             ConstManager.navLinks.classList.toggle('enable');
-        } else {
-            ConstManager.sellWindow.classList.add('hidden');
-            ConstManager.navLinks.classList.toggle('enable');
-        }
     });
 }
 

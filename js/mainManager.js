@@ -11,6 +11,11 @@ export const ConstManager = {
     mainImage: document.getElementById('mainImage'),
     burgerMenu: document.querySelector('.burgerMenu'),
     navLinks: document.querySelector('.navButtons'),
-    searchButton: document.querySelector('.searchButton'),
     roomBox: document.getElementById('roomId'),
+    applyFilterButton: document.getElementById('applyFilterButton'),
+    removeFilterButton: document.getElementById('removeFilterButton'),
+    saveButton: document.getElementById('saveButton'),
+    homeButton: document.getElementById('homeButton'),
+    rentButton: document.getElementById('rentButton'),
+    searchButton: document.getElementById('searchButton'),
 }

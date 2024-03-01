@@ -9,6 +9,7 @@ export function displayProperties() {
         // Create a propertyBox element
         const propertyBox = document.createElement('div');
         propertyBox.classList.add('propertyBox', 'outerShadow');
+        propertyBox.id = key;
 
         // Set the inner HTML of the propertyBox with property data
         propertyBox.innerHTML = `
