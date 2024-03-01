@@ -37,7 +37,7 @@
             <div class="landingPageFilter"></div>
         </div>
         <h2 class="mainSectionTitle">Real estate propositions <span style="color: var(--mainColor);">coded</span> just for <span style="color: var(--mainColor);">you</span></h2>
-        <div class="sellSectionBox outerShadow hidden scoller" id="sellSectionBox">
+        <div class="sellSectionBox outerShadow scoller" id="sellSectionBox">
             <div class="leftSectionBox">
                 <div class="titleBox">
                     <h3 class="formTitle">Title <span style="color: var(--mainColor);">*</span></h3>
@@ -94,10 +94,53 @@
             </div>
         </div>
     </main>
-    <section class="propertiesSection">
+    <section id="propertiesAnchor" class="propertiesSection">
         <h2 class="propertiesTitle">Properties</h2>
         <img src="./assets/Rectangle.png" alt="Rectangle" class="separationRectangle">
         <p class="propertiesSubTitle">This is where your life <span style="color: var(--mainColor);">reboots</span></p>
+        <div class="filterBox">
+            <form class="filterForm outerSolidShadow" id="filterForm">
+                <div class="filterItem outerSolidShadow">
+                    <label for="location" class="filterLabel">Location :</label>
+                    <input type="text" id="location" name="location" class="filterInput location">
+                </div>
+                
+                <div class="filterItem outerSolidShadow">
+                    <label for="minPrice" class="filterLabel">Minimum Price :</label>
+                    <input type="number" id="minPrice" name="minPrice" class="filterInput">
+                </div>
+                
+                <div class="filterItem outerSolidShadow">
+                    <label for="maxPrice" class="filterLabel">Maximum Price :</label>
+                    <input type="number" id="maxPrice" name="maxPrice" class="filterInput">
+                </div>
+                
+                <div class="filterItem outerSolidShadow">
+                    <label for="type" class="filterLabel">Type :</label>
+                    <select id="type" name="type" class="filterInput">
+                        <option value="">Any</option>
+                        <option value="house">House</option>
+                        <option value="apartment">Apartment</option>
+                        <option value="loft">Loft</option>
+                        <option value="studio">Studio</option>
+                    </select>
+                </div>
+                
+                <div class="filterItem outerSolidShadow">
+                    <label for="minSurface" class="filterLabel">Min Surface (m²) :</label>
+                    <input type="number" id="minSurface" name="minSurface" class="filterInput">
+                </div>
+                
+                <div class="filterItem outerSolidShadow">
+                    <label for="maxSurface" class="filterLabel">Max Surface (m²) :</label>
+                    <input type="number" id="maxSurface" name="maxSurface" class="filterInput">
+                </div>
+                
+
+                <button type="button" class="filterButton outerSolidShadow" id="applyFilterButton">Apply Filter</button>
+                <button type="button" class="removeFilterButton outerSolidShadow" id="removeFilterButton">Remove Filter</button>
+            </form>
+        </div>
         <div class="propertiesBox">
         </div>
     </section>
