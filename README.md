@@ -97,9 +97,6 @@ Bonus : Une page secrète, accessible uniquement aux utilisateurs disposant des 
 ## 🔗 Livrables
 Mon GitHub :[![github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/HaelyosStudio)
 
-Mon Trello :
-[![trello](https://img.shields.io/badge/Trello-0052CC?style=for-the-badge&logo=trello&logoColor=white)](https://trello.com/invite/b/Gxd3jH8Q/ATTI2389ddecbe07a26188642a8162f73de1A4294AD9/code-immo)
-
 Mon projet :
 [![project](https://img.shields.io/badge/website-000000?style=for-the-badge&logo=About.me&logoColor=white)](https://haelyosstudio.github.io/Brief-Immo/)
 
